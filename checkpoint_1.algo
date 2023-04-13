@@ -1,0 +1,29 @@
+ALGORITHM checkpoint_algo
+VAR
+    str : STRING;
+    ndr_caractere,nbr_mot,nbr_voyelle : INTEGER;
+    i : INTEGER;
+BEGIN
+    write("Donnez-moi une phrase qui se termine par un point");
+    read(str);
+    //Le nombre de caractère dans la phrase(str).
+    nbr_caractere = str.length;
+    write("Le nombre de caractère dans cette phrase(str) est",nbr_caractere);
+    //Le nombre de mot dans la phrase.
+    nbr_mot = 1;
+    FOR i FROM 0 TO str.length-1 STEP 1  DO
+        IF (str[i] == " ") THEN
+            nbr_mot = nbr_mot + 1;
+        END_IF
+    END_FOR
+    write("Le nombre de mot dans la phrasw(str) est",nbr_mot);
+    //Le nombre de voyelle dans la phrase(str).
+    //Bonjour Amadou, bienvenue à gomycode. 
+    lettre = str[0];
+    FOR i FROM 0 TO str.length-1 STEP 1  DO
+        IF (str[i] == "a" || str[i] == "i" || str[i] == "u" || str[i] == "y" || str[i] == "o") THEN
+            nbr_voyelle = nbr_voyelle + 1;
+        END_IF
+    END_FOR
+    write("Le nombr de voyelle dans la phrase(str) est",nbr_voyelle);
+END
