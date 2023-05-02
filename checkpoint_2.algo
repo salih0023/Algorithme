@@ -1,0 +1,35 @@
+ALGORITHM checkpoint_2
+VAR
+    sum, i, j : INTEGER;
+    set_1 : [];
+    set_2 : [];
+    veficateur : BOOLEAN ;
+BEGIN
+    set_1 = [3,1,7,9] ;
+    set_2 = [2,4,9,3] ;
+    verificateur = True ;
+    sum = 0 //la somme des élèments distinct
+    //premier vérificateur
+    FOR i FROM 0 TO set_1.length STEP 1  DO
+        FOR j FROM 0 TO set_2.length STEP 1  DO
+           IF (set_1[i] == set_2[j]) THEN
+            verificateur = false ; 
+           END_IF
+        END_FOR
+        IF (verificateur == true) THEN
+            sum = sum + set_1[i] ;
+        END_IF
+    END_FOR
+    // dexième vérificateur
+    FOR j FROM 0 TO set_2.length STEP 1  DO
+        FOR i FROM 0 TO set_1.length STEP 1  DO
+            IF (set_1[i] == set_2[j]) THEN
+                veficateur == false ;
+            END_IF
+        END_FOR
+        IF (veficateur == true) THEN
+            sum = sum + set_2j ;
+        END_IF
+    END_FOR
+    write("la somme des élèments distincts", sum) ;
+END
