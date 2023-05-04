@@ -1,3 +1,11 @@
+// Problème 1:
+
+// Étant donné deux ensembles d'éléments, trouvez la somme de tous les éléments distincts de l'ensemble. En d'autres termes, trouvez la somme de tous les éléments présents dans l'un ou l'autre des ensembles donnés.
+// Exemple:
+// Jeu 1 : [3, 1, 7, 9], Jeu 2 : [2, 4, 1, 9, 3]
+// Sortie : 13 (éléments distincts 4, 7, 2)
+// Donner une solution à ce problème, en utilisant des tableaux
+
 ALGORITHM checkpoint_2
 VAR
     sum, i, j : INTEGER;
