@@ -1,0 +1,30 @@
+// Problème 2 :
+// On vous demande d'écrire un algorithme qui remplit les conditions suivantes :
+
+// Nom : Produit scalaire
+// Description:
+// Ecrire une procédure, appelée dot_product qui calcule dans la variable ps, le produit scalaire de v1 et v2 (v1 et v2 sont des vecteurs de IR)
+// Écrire un algorithme qui détermine, pour n paires de vecteurs donnés, si deux vecteurs de RI donné sont orthogonaux, en appelant la procédure définie à la question précédente. Le produit scalaire de deux vecteurs orthogonaux est nul.
+// Modifiez l'algorithme précédent si vous utilisez une fonction dot_product au lieu d'une procédure.
+
+ALGORITHM produit_scolaire
+    PROCEDURE dot_product(v1 : INTEGER, v2 : INTEGER) ;
+    VAR
+        ps : INTEGER ;
+    BEGIN
+        FOR i FROM 0 TO v1.length STEP 1  DO
+            ps = ps + (v1[i] + v2[j]) ;
+        END_FOR
+        IF (ps == 0) THEN
+            write("Les 2 vecteurs v1,v2 sont orthogonaux ") ;
+        ELSE
+            write("les 2 vecteurs v1,v2 ne sont pas orthogonaux") ;
+        END_IF
+    END
+VAR
+    v1, v2 : INTEGER ;
+BEGIN
+    write("Veuillez écrir deux vecteux v1 et v2 :") ;
+    read(v1, v2) ;
+    ps(v1, v2)
+END
