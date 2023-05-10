@@ -1,0 +1,18 @@
+// Instructions
+// Chaque fois, travaillez uniquement avec le premier élément i-1 du tableau
+// Choisissez l' élément arr[i] et insérez-le dans une séquence triée dans le tableau de 0 à i-1.
+
+
+ALGORITHM tri_par_insertion
+VAR
+    i = INTEGER ;
+    TMP = INTEGER ;
+BEGIN
+    i = 0 ;
+    FOR i FROM 2 TO n STEP 1  DO
+        TMP = T[i];
+        WHILE (j > 1) & (T[j-1]>TMP)DO
+            T[j] == T[j-1] ;
+        END_WHILE
+        write (T[j] = TMP)
+    END_FOR
