@@ -6,11 +6,15 @@
 // Condition d'arrêt : un mot vide ou un mot contenant un seul caractère est un palindrome.
 
 ALGORITHM palindrome
-    FUNCTION palindrome(T : mot, n, STRING) : BOOLEAN ;
+VAR
+    i : INTEGER ;
+    mot : STRING;
+    //Fonction récursive
+    FUNCTION fctn_palindrome(T : mot, n, STRING) : BOOLEAN ;
     VAR
         i, j : INTEGER ;
         resultat : BOOLEAN ;
-    BEGIN
+    BEGIN //début de la Fonction
         i = 0 ;
         j = n ;
         resultat = True ;
@@ -26,9 +30,7 @@ ALGORITHM palindrome
             T[j] = T[j] - 1 ;
         END_WHILE
         RETURN resultat ;
-    END
-VAR
-    palindrome(T : mot, n STRING) ;
-BEGIN
-    set_instructions
-END
+    END //fin de la Fonction
+BEGIN //début de l'algorithme
+    mot = fctn_palindrome
+END //Fin de l'algorithme
