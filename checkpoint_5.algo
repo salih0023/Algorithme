@@ -1,0 +1,34 @@
+// Instructions
+// Instructions:
+// Répartition du traitement : on compare les caractères situés en fin de mot :
+    // si égalité on teste le reste du mot
+    // si différence on s'arrête
+// Condition d'arrêt : un mot vide ou un mot contenant un seul caractère est un palindrome.
+
+ALGORITHM palindrome
+    FUNCTION palindrome(T : mot, n, STRING) : BOOLEAN ;
+    VAR
+        i, j : INTEGER ;
+        resultat : BOOLEAN ;
+    BEGIN
+        i = 0 ;
+        j = n ;
+        resultat = True ;
+        write("Saisissez un mot") ; 
+        read("mot") ;
+        WHILE ((resultat = True) & (i < j)) DO
+            IF (T[i] == T[j]) THEN
+                RETURN True ;
+            ELSE
+                RETURN false
+            END_IF
+            T[i] = T[i] + 1 ;
+            T[j] = T[j] - 1 ;
+        END_WHILE
+        RETURN resultat ;
+    END
+VAR
+    palindrome(T : mot, n STRING) ;
+BEGIN
+    set_instructions
+END
